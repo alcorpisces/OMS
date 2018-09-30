@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<movies xmlns="http://learn.it.uts.edu.au/wsd"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://learn.it.uts.edu.au/wsd movies.xsd">
+
+    <movie>
+        <movieTitle>John Cena</movieTitle>
+        <movieGenre>Action</movieGenre>
+        <movieReleaseDate>2018-12-12</movieReleaseDate>
+        <moviePrice>$40</moviePrice>
+        <availableCopies>80</availableCopies>
+    </movie>
+    <movie>
+        <movieTitle>Mission Impossible</movieTitle>
+        <movieGenre>Action</movieGenre>
+        <movieReleaseDate>2018-09-14</movieReleaseDate>
+        <moviePrice>$45</moviePrice>
+        <availableCopies>130</availableCopies>
+    </movie>
+</movies>

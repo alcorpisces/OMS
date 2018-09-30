@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<?xml-stylesheet type="text/xsl" href="users.xsl"?>
+<users xmlns="http://learn.it.uts.edu.au/wsd"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://learn.it.uts.edu.au/wsd users.xsd">
+    <user>
+        <email>ryan@ryanheise.com</email>
+        <name>Ryan Heise</name>
+        <password>1234</password>
+        <phoneNumber>0412824952</phoneNumber>
+        <address>15 Johnson st, Sydney, NSW, 2000</address>
+    </user>
+    <user>
+        <email>joe@bloggs.com</email>
+        <name>Joe Bloggs</name>
+        <password>foobar</password>
+        <phoneNumber>0412345678</phoneNumber>
+        <address>123 Hill st, Sydney, NSW, 2000</address>
+    </user>
+</users>
