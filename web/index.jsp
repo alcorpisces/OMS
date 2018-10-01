@@ -71,7 +71,7 @@
                     <tr><td>Genre</tr>
                     <tr>
                         <td>
-                            <input list="genreList" name="genre" value="<%=genre%>">
+                            <input list="genreList" name="genre">
                             <datalist id="genreList">
                                 <option value="Action" />
                                 <option value="Sci-Fi" />

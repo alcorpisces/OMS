@@ -63,10 +63,10 @@
             <table>
                     <tr><td>Email</tr>
                     <tr><td><input type="text" name="email" value="<%=email%>"></td></tr>
-                    <tr><td><font color="red"><%=enter & email.equals("") ? "The email address is invalid" : ""%></font></td></tr>
+                    <tr><td><font color="red"><%=enter & email.equals("") ? "The email address is empty" : ""%></font></td></tr>
                     <tr><td>Password</td></tr>
                     <tr><td><input type="password" name="password" value="<%=password%>"></td></tr>
-                    <tr><td><font color="red"><%=enter & password.equals("") ? "The password is invalid" : ""%></font></td></tr>
+                    <tr><td><font color="red"><%=enter & password.equals("") ? "The password is empty" : ""%></font></td></tr>
         
                 <%
                     if (!email.equals("") && !password.equals("")) 
@@ -76,25 +76,30 @@
                             Users users = userApp.loadXML();
                             User user = users.login(email, password);
                                                     
-                        if (user != null) {
-                            session.setAttribute("user", user);
-                            response.sendRedirect("main.jsp");
-                        } else { 
-                %>    
-                    <tr>
-                        <td><font color="red"><%=user == null ? "The user is not exist or the password is incorrect" : ""%></td>
-                    </tr>
-                
-                <%       }
-                        }
-                        else { 
-                %>    
-                    <tr>
-                        <td><font color="red"><%=userApp.getUsers() == null ? "Check the JAXB" : ""%></td>
-                    </tr>
-                
-                <%       }
-                    }  
+                            if (user != null) 
+                            {
+                                session.setAttribute("user", user);
+                                response.sendRedirect("main.jsp");
+                            } 
+                    %>      
+                            <tr>
+                                <td><font color="red"><%=!users.matchUser(email) & user==null ? "The user does not exist" : ""%></td>
+                            </tr>
+                            <tr>
+                                <td><font color="red"><%=users.matchUser(email) & user==null ? "The password is incorrect" : ""%></td>
+                            </tr>
+
+                    <%  }
+                    
+                        else 
+                        { 
+                    %>    
+                        <tr>
+                            <td><font color="red">Check the JAXB</td>
+                        </tr>
+
+                    <%  }
+                    }
                 %>
                     <tr>
                         <td><input type="submit" value="Login"></td>

@@ -63,7 +63,7 @@ public class Movies implements Serializable{
 
         for (Movie m : list)
         {
-            if (title.equals(m.getTitle()) || genre.equals(m.getTitle()))
+            if (title.equals(m.getTitle()) || genre.equals(m.getGenre()))
             {
                 searched.add(m);
             }

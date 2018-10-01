@@ -2,6 +2,21 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/ShiWei/Documents/NetBeansProjects/New%20Folder%20(2)/assignment_OMS/web/WEB-INF/movies.xsd</file>
+            <file>file:/C:/Users/ShiWei/Documents/NetBeansProjects/New%20Folder%20(2)/assignment_OMS/web/WEB-INF/users.xml</file>
+            <file>file:/C:/Users/ShiWei/Documents/NetBeansProjects/New%20Folder%20(2)/assignment_OMS/src/java/uts/wsd/TestJAXB.java</file>
+            <file>file:/C:/Users/ShiWei/Documents/NetBeansProjects/New%20Folder%20(2)/assignment_OMS/src/java/uts/wsd/Movies.java</file>
+            <file>file:/C:/Users/ShiWei/Documents/NetBeansProjects/New%20Folder%20(2)/assignment_OMS/src/java/uts/wsd/Movie.java</file>
+            <file>file:/C:/Users/ShiWei/Documents/NetBeansProjects/New%20Folder%20(2)/assignment_OMS/web/index.jsp</file>
+            <file>file:/C:/Users/ShiWei/Documents/NetBeansProjects/New%20Folder%20(2)/assignment_OMS/src/java/uts/wsd/Users.java</file>
+            <file>file:/C:/Users/ShiWei/Documents/NetBeansProjects/New%20Folder%20(2)/assignment_OMS/src/java/uts/wsd/XMLDateAdapter.java</file>
+            <file>file:/C:/Users/ShiWei/Documents/NetBeansProjects/New%20Folder%20(2)/assignment_OMS/web/WEB-INF/users.xsd</file>
+            <file>file:/C:/Users/ShiWei/Documents/NetBeansProjects/New%20Folder%20(2)/assignment_OMS/src/java/uts/wsd/XmlValidationEventHandler.java</file>
+            <file>file:/C:/Users/ShiWei/Documents/NetBeansProjects/New%20Folder%20(2)/assignment_OMS/web/WEB-INF/movies.xml</file>
+            <file>file:/C:/Users/ShiWei/Documents/NetBeansProjects/New%20Folder%20(2)/assignment_OMS/web/register.jsp</file>
+            <file>file:/C:/Users/ShiWei/Documents/NetBeansProjects/New%20Folder%20(2)/assignment_OMS/web/login.jsp</file>
+            <file>file:/C:/Users/ShiWei/Documents/NetBeansProjects/New%20Folder%20(2)/assignment_OMS/src/java/uts/wsd/MovieApplication.java</file>
+        </group>
     </open-files>
 </project-private>

@@ -33,22 +33,25 @@ public class Users implements Serializable
         list.add(user);
     }
     
+    public boolean allowAdd(String email)
+    {
+        for(User current: list)
+        {
+            if(current.getEmail().equals(email))
+            {  
+                return false;
+            }
+        }
+        return true;
+    }
+    
     public void removeUser(String email)
     {
         for (int i = 0; i < getList().size(); i++)
         {
-                if (getList().get(i).getEmail().equals(email))
-                        getList().remove(i);
+            if (getList().get(i).getEmail().equals(email))
+                getList().remove(i);
         }
-        
-//       for(User current: list)
-//        {
-//            if(current.getEmail().equals(email))
-//            {
-//                list.remove(current)
-//                //System.out.println(current.getAddress());
-//            }
-//        }
     }
     
     public User login(String email, String password)
@@ -76,16 +79,16 @@ public class Users implements Serializable
         }
     }
     
-    public User matchUser(String email)
+    public boolean matchUser(String email)
     {
         for(User current: list)
         {
             if(current.getEmail().equals(email))
             {
-                return current;
+                return true;
             }
         }
-        return null;
+        return false;
     }
     
 }

@@ -91,18 +91,21 @@
                         {
                             User user = new User(email,name,password,phoneNumber,address);
                             Users users = userApp.loadXML();
-                            users.addUser(user);
-                            userApp.updateXML(users);                        
-                            session.setAttribute("user", user);
-                            response.sendRedirect("main.jsp");
-                        
+                            if (users.allowAdd(email))
+                            {
+                                users.addUser(user);
+                                userApp.updateXML(users);                        
+                                session.setAttribute("user", user);
+                                response.sendRedirect("main.jsp");
+                            }
                 %>    
                     <tr>
-                        <td><font color="red"><%=user == null ? "The user is not exist or the password is incorrect" : ""%></td>
+                        <td><font color="red"><%=!users.allowAdd(email) ? "The emaill address has been registered" : ""%></font></td>
                     </tr>
                 
-                <%       }
+                   <%       
                         }
+                    }
                   %>  
                 
                 <tr>
