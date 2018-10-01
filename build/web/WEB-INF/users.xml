@@ -1,20 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<?xml-stylesheet type="text/xsl" href="users.xsl"?>
-<users xmlns="http://learn.it.uts.edu.au/wsd"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://learn.it.uts.edu.au/wsd users.xsd">
-    <user>
-        <email>ryan@ryanheise.com</email>
-        <name>Ryan Heise</name>
-        <password>1234</password>
-        <phoneNumber>0412824952</phoneNumber>
-        <address>15 Johnson st, Sydney, NSW, 2000</address>
-    </user>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:users xmlns:ns2="http://learn.it.uts.edu.au/wsd">
     <user>
         <email>joe@bloggs.com</email>
         <name>Joe Bloggs</name>
@@ -22,4 +7,18 @@ and open the template in the editor.
         <phoneNumber>0412345678</phoneNumber>
         <address>123 Hill st, Sydney, NSW, 2000</address>
     </user>
-</users>
+    <user>
+        <email>lswvivian0103@gmail.com</email>
+        <name>Shiwei Lin</name>
+        <password>11</password>
+        <phoneNumber>0421906760</phoneNumber>
+        <address>Unit 209 458 Forest Road</address>
+    </user>
+    <user>
+        <email>lswvivian0103@gmail.com</email>
+        <name>Shiwei Lin</name>
+        <password>11</password>
+        <phoneNumber>0421906760</phoneNumber>
+        <address>Unit 209 458 Forest Road</address>
+    </user>
+</ns2:users>

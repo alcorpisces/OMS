@@ -18,14 +18,15 @@
         %>
         Welcome, <%=loginuser.getName()%>
         <a href="account.jsp">Account</a>
+        <a href="main.jsp">Main</a>
+        <a href="cancel.jsp">Cancel</a>
         <a href="logout.jsp">Logout</a>
         <%
             }
         %>
-        <a href="index.jsp">Index</a>
+        <a href="index.jsp">Home</a>
         <a href="register.jsp">Register</a>
         <a href="login.jsp"><%=loginuser == null ? "Login" : ""%></a>
-       
-        <h1>Hello World!</h1>
+        <h1>Main</h1>
     </body>
 </html>

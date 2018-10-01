@@ -9,15 +9,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Logout Page</title>
     </head>
     <%
         session.invalidate();
+        response.sendRedirect("index.jsp");
     %>
     <body>
-        <a href="index.jsp">Index</a>
-        <a href="register.jsp">Register</a>
-        <a href="login.jsp">Login</a>
-        <h1>You have been logged out. Click <a href="index.jsp">here</a> to return to the index page.</h1>
+
     </body>
 </html>

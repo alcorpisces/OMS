@@ -16,7 +16,6 @@
     <%  
         String xmlFilePath = application.getRealPath("WEB-INF/users.xml");
         String xsdFilePath = application.getRealPath("WEB-INF/users.xsd");
-        //String filePath = application.getRealPath("WEB-INF/users.xml");
     %>
     
     <jsp:useBean id="userApp" class="uts.wsd.UserApplication" scope="application">
@@ -26,9 +25,21 @@
     
     
     <body>
-        <a href="index.jsp">Index</a>
+        <%
+            User loginuser = (User) session.getAttribute("user");
+            if (loginuser != null) {
+        %>
+        Welcome, <%=loginuser.getName()%>
+        <a href="account.jsp">Account</a>
+        <a href="main.jsp">Main</a>
+        <a href="logout.jsp">Logout</a>
+        <%
+            }
+        %>
+        <a href="index.jsp">Home</a>
         <a href="register.jsp">Register</a>
-        <a href="login.jsp">Login</a>
+        <a href="login.jsp"><%=loginuser == null ? "Login" : ""%></a>
+        
         <h1>Login</h1>
         
         <%
@@ -60,10 +71,8 @@
                 <%
                     if (!email.equals("") && !password.equals("")) 
                     {
-                        //Users users = userApp.loadXML();
                         if (userApp.loadXML()!=null)
                         {
-                           // Users users = userApp.loadXML();
                             Users users = userApp.loadXML();
                             User user = users.login(email, password);
                                                     
@@ -87,13 +96,10 @@
                 <%       }
                     }  
                 %>
-                
-
-                      
-
                     <tr>
-                        <td><button type="button" onclick="history.back()">Back</button></td>
                         <td><input type="submit" value="Login"></td>
+                        <td><button type="button" onclick="history.back()">Back</button></td>
+                        
                     </tr>
             </table>
         </form>

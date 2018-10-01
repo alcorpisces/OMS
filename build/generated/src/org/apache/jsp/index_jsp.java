@@ -60,7 +60,6 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
   
         String xmlFilePath = application.getRealPath("WEB-INF/movies.xml");
         String xsdFilePath = application.getRealPath("WEB-INF/movies.xsd");
-        //String filePath = application.getRealPath("WEB-INF/users.xml");
     
       out.write("\n");
       out.write("    \n");
@@ -96,13 +95,14 @@ xsdFilePath);
       out.print(loginuser.getName());
       out.write("\n");
       out.write("        <a href=\"account.jsp\">Account</a>\n");
+      out.write("        <a href=\"main.jsp\">Main</a>\n");
       out.write("        <a href=\"logout.jsp\">Logout</a>\n");
       out.write("        ");
 
             }
         
       out.write("\n");
-      out.write("        <a href=\"index.jsp\">Index</a>\n");
+      out.write("        <a href=\"index.jsp\">Home</a>\n");
       out.write("        <a href=\"register.jsp\">Register</a>\n");
       out.write("        <a href=\"login.jsp\">");
       out.print(loginuser == null ? "Login" : "");
@@ -165,8 +165,10 @@ xsdFilePath);
       out.print(to);
       out.write("\"></td></tr>\n");
       out.write("                    \n");
-      out.write("                    <tr><td><button type=\"button\" onclick=\"history.back()\">Back</button></td>\n");
-      out.write("                        <td><input type=\"submit\" value=\"Search\"</td></tr>\n");
+      out.write("                    <tr>\n");
+      out.write("                        <td><input type=\"submit\" value=\"Search\"</td>\n");
+      out.write("                        <td><button type=\"button\" onclick=\"history.back()\">Back</button></td>\n");
+      out.write("                    </tr>\n");
       out.write("                </table>\n");
       out.write("            </form>\n");
       out.write("        \n");

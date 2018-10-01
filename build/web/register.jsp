@@ -16,7 +16,6 @@
     <%  
         String xmlFilePath = application.getRealPath("WEB-INF/users.xml");
         String xsdFilePath = application.getRealPath("WEB-INF/users.xsd");
-        //String filePath = application.getRealPath("WEB-INF/users.xml");
     %>
     
     <jsp:useBean id="userApp" class="uts.wsd.UserApplication" scope="application">
@@ -31,11 +30,12 @@
         %>
         Welcome, <%=loginuser.getName()%>
         <a href="account.jsp">Account</a>
+        <a href="main.jsp">Main</a>
         <a href="logout.jsp">Logout</a>
         <%
             }
         %>
-        <a href="index.jsp">Index</a>
+        <a href="index.jsp">Home</a>
         <a href="register.jsp">Register</a>
         <a href="login.jsp"><%=loginuser == null ? "Login" : ""%></a>
         
@@ -87,10 +87,8 @@
                 <%
                     if (!email.equals("") && !name.equals("") && !password.equals("") && !phoneNumber.equals("") && !address.equals("")) 
                     {
-                        //Users users = userApp.loadXML();
                         if (userApp.loadXML()!=null)
                         {
-                           // Users users = userApp.loadXML();
                             User user = new User(email,name,password,phoneNumber,address);
                             Users users = userApp.loadXML();
                             users.addUser(user);
@@ -108,8 +106,9 @@
                   %>  
                 
                 <tr>
-                    <td><button type="button" onclick="history.back()">Back</button></td>
                     <td><input type="submit" value="Register"</td>
+                    <td><button type="button" onclick="history.back()">Back</button></td>
+
                 </tr>
             </table>
         </form>
